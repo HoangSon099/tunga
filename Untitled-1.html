@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới thiệu bản thân - Nguyễn Tú Nga</title>
+    <style>
+        /* Nền và phong cách chung */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to bottom, #a8cfff, #e0f7ff);
+            color: #fff;
+            text-align: center;
+            overflow-x: hidden;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 25px;
+            border-bottom: 2px solid rgba(255,255,255,0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        h1 {
+            font-size: 2.6em;
+            margin: 0;
+            color: #ffffff;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+        }
+
+        .container {
+            margin: 40px auto;
+            width: 85%;
+            max-width: 650px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 0 20px rgba(255,255,255,0.3);
+        }
+
+        p {
+            font-size: 1.1em;
+            margin: 10px 0;
+            color: #f0f8ff;
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: #ffebf0;
+        }
+
+        .links {
+            margin-top: 25px;
+        }
+
+        .links a {
+            display: inline-block;
+            text-decoration: none;
+            background: rgba(255,255,255,0.85);
+            color: #006ba6;
+            padding: 10px 20px;
+            border-radius: 10px;
+            margin: 8px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .links a:hover {
+            background: #b3e5fc;
+            color: #004b8d;
+            transform: scale(1.1);
+        }
+
+        footer {
+            margin-top: 40px;
+            padding: 15px;
+            font-size: 0.9em;
+            color: #e6f2ff;
+        }
+
+        /* Hiệu ứng tuyết rơi */
+        .snowflake {
+            position: fixed;
+            top: 0;
+            color: white;
+            font-size: 1.2em;
+            animation: fall 10s linear infinite;
+        }
+
+        @keyframes fall {
+            0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(100vh) rotate(360deg); opacity: 0.4; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>❄️ Giới Thiệu Bản Thân ❄️</h1>
+    </header>
+
+    <div class="container">
+        <p><span class="highlight">Họ và tên:</span> Nguyễn Tú Nga</p>
+        <p><span class="highlight">Ngày sinh:</span> 21/02/2008</p>
+        <p><span class="highlight">Giới tính:</span> Nữ</p>
+        <p><span class="highlight">Địa chỉ:</span> Làng Chanh, Phú Xuyên, Hà Nội</p>
+        <p><span class="highlight">Học sinh:</span> A1-K59 - Trường THPT Phú Xuyên A</p>
+        <p><span class="highlight">Sở thích:</span> Xem phim, Du lịch</p>
+
+        <div class="links">
+            <a href="https://www.instagram.com/angangangangw/" target="_blank">Instagram</a>
+            <a href="https://www.facebook.com/whatareulking" target="_blank">Facebook</a>
+            <a href="https://www.tiktok.com/@hachanthjenmunz" target="_blank">TikTok</a>
+        </div>
+    </div>
+
+    <footer>
+        © 2025 Nguyễn Tú Nga | Giao diện mùa đông ❄️
+    </footer>
+
+    <!-- Hiệu ứng tuyết -->
+    <script>
+        const snowContainer = document.body;
+        for (let i = 0; i < 35; i++) {
+            const snow = document.createElement('div');
+            snow.classList.add('snowflake');
+            snow.innerHTML = '❄';
+            snow.style.left = Math.random() * 100 + 'vw';
+            snow.style.animationDuration = (5 + Math.random() * 5) + 's';
+            snow.style.fontSize = (10 + Math.random() * 20) + 'px';
+            snow.style.opacity = Math.random();
+            snowContainer.appendChild(snow);
+        }
+    </script>
+</body>
+</html>
